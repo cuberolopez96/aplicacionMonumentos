@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.io.Serializable;
@@ -18,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lista = (ListView) findViewById(R.id.lista);
         Monumento[] monumentoses = {new Monumento("Mezquita","La catedral de Cordoba"),new Monumento("Puente Romano","es un puente")};
-        ArrayAdapter<Monumento> adapter = new ArrayAdapter<Monumento>(this,R.layout.elementos,monumentoses);
-        lista.setAdapter(adapter);
+        ListCustomAdapter listCustomAdapter = new ListCustomAdapter(monumentoses,this);
+        lista.setAdapter(listCustomAdapter);
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
