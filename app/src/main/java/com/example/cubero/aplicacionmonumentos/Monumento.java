@@ -1,5 +1,6 @@
 package com.example.cubero.aplicacionmonumentos;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 
 import java.io.Serializable;
@@ -10,11 +11,14 @@ import java.io.Serializable;
 public class Monumento implements Serializable{
     private String nombre;
     private String descripcion;
+    private int id;
 
-    public Monumento(String nombre, String descripcion) {
+
+    public Monumento(String nombre, String descripcion,int id) {
         setNombre(nombre);
         setDescripcion(descripcion);
-    }
+        setId(id);
+            }
 
     public String getNombre() {
         return nombre;
@@ -33,5 +37,15 @@ public class Monumento implements Serializable{
     }
     public String toString(){
         return "Nombre: "+this.getNombre()+"\n  Descripcion:"+this.getDescripcion();
+    }
+
+
+    public int getId() {
+
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
