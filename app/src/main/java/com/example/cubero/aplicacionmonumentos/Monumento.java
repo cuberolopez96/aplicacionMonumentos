@@ -12,6 +12,7 @@ public class Monumento implements Serializable{
     private String nombre;
     private String descripcion;
     private int id;
+    private String textolargo;
 
 
     public Monumento(String nombre, String descripcion,int id) {
