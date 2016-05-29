@@ -15,10 +15,11 @@ public class Monumento implements Serializable{
     private String textolargo;
 
 
-    public Monumento(String nombre, String descripcion,int id) {
+    public Monumento(String nombre, String descripcion,int id,String textolargo) {
         setNombre(nombre);
         setDescripcion(descripcion);
         setId(id);
+        setTextolargo(textolargo);
             }
 
     public String getNombre() {
@@ -48,5 +49,13 @@ public class Monumento implements Serializable{
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getTextolargo() {
+        return textolargo;
+    }
+
+    public void setTextolargo(String textolargo) {
+        this.textolargo = textolargo;
     }
 }

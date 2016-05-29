@@ -11,6 +11,7 @@ public class Destino extends AppCompatActivity {
     private TextView descripcion;
     private Monumento monumento;
     private ImageView imageView;
+    private TextView ttextolargo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,5 +25,7 @@ public class Destino extends AppCompatActivity {
         nombre.setText("Nombre: "+monumento.getNombre());
         descripcion.setText("Descripcion: "+monumento.getDescripcion());
         imageView.setImageResource(monumento.getId());
+        ttextolargo = (TextView) findViewById(R.id.textolargo);
+        ttextolargo.setText(""+monumento.getTextolargo());
     }
 }

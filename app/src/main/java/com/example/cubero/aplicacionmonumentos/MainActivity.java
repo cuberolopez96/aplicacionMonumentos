@@ -28,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lista = (ListView) findViewById(R.id.lista);
         Monumento[] monumentoses = {
-                new Monumento("Mezquita", "La catedral de Cordoba",R.drawable.mezquita1),
-                new Monumento("Puente Romano", "es un puente",R.drawable.puente),
-                new Monumento("Sinagoga","Es la Sinagoga de Cordoba", R.drawable.mezquita1)
+                new Monumento("Mezquita", "La catedral de Cordoba",R.drawable.mezquita1,"La Mezquita-Catedral de Córdoba,1 2 antes «Santa María Madre de Dios» o «Gran Mezquita de Córdoba», actualmente conocida como la Catedral de la Asunción de Nuestra Señora de forma eclesiástica o simplemente Mezquita de Córdoba o Catedral de Córdoba de forma general, es un edificio de la ciudad de Córdoba, España."),
+                new Monumento("Puente Romano", "es un puente",R.drawable.puente,"El puente romano de Córdoba está situado sobre el río Guadalquivir a su paso por Córdoba, y une el barrio del Campo de la Verdad con el Barrio de la Catedral. También conocido como \"el Puente Viejo\" fue el único puente con que contó la ciudad durante 20 siglos, hasta la construcción del puente de San Rafael, a mediados del siglo XX. El 9 de enero de 2008 se inauguró la mayor y discutida remodelación que el puente Romano ha tenido en su historia."),
+                new Monumento("Sinagoga","Es la Sinagoga de Cordoba", R.drawable.mezquita1,"La Sinagoga de Córdoba es un templo hebreo localizado en la calle Judíos de la judería de la ciudad de Córdoba (España). Es la única sinagoga existente en Andalucía y una de las únicas tres que se conservan en España de esa época, junto a la Sinagoga del Tránsito y la de Santa María la Blanca.1 El 24 de enero de 1885 fue declarada Bien de Interés Cultural en la categoría de monumento.2 Forma parte del centro histórico de Córdoba que fue declarado Patrimonio de la Humanidad por la Unesco en 1994.3")
         };
         ListCustomAdapter listCustomAdapter = new ListCustomAdapter(monumentoses, this);
         lista.setAdapter(listCustomAdapter);
